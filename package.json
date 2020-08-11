@@ -1,0 +1,19 @@
+{
+  "name": "vanillajs",
+  "version": "1.0.0",
+  "description": "Cloning Web app with Vanilla JS",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazybirdz/vanillaJS.git"
+  },
+  "author": "Crazybirdz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazybirdz/vanillaJS/issues"
+  },
+  "homepage": "https://github.com/crazybirdz/vanillaJS#readme"
+}
