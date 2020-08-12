@@ -38,5 +38,8 @@
     "gulp-webserver": "^0.9.1",
     "node-sass": "^4.14.1",
     "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "mobx-localstorage": "^1.1.0"
   }
 }

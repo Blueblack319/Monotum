@@ -8,12 +8,14 @@ html(lang="en")
     body
         header
         main
-            .js-clock Hello
-
-            .name
-            .toDo
+            .js-clock Clock
+            div.js-greeting.greeting What your Name?
+            form.js-form.form
+                input(type="text", placeholder="Please, Write name") 
+            .toDo To Do
         footer
 
         script(src="js/clock.js")
+        script(src="js/name.js")
 
 
