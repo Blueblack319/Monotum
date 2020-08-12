@@ -37,6 +37,7 @@ const webserver = () =>
 const watch = () => {
   gulp.watch(routes.style.watch, style);
   gulp.watch(routes.pug.watch, pug);
+  gulp.watch(routes.js.watch, js);
 };
 
 const gh = () => gulp.src("dist/**/*").pipe(ghPages());
