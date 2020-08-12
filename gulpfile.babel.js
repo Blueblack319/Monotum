@@ -3,6 +3,8 @@ import gPug from "gulp-pug";
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer";
 import minify from "gulp-csso";
+import bro from "gulp-bro";
+import babelify from "babelify";
 import ws from "gulp-webserver";
 import ghPages from "gulp-gh-pages";
 import del from "del";
@@ -21,6 +23,11 @@ const routes = {
     src: "src/*.pug",
     dist: "dist",
     watch: "src/**/*.pug",
+  },
+  js: {
+    src: "src/js/main.js",
+    dist: "dist/js",
+    watch: "src/**/*.js",
   },
 };
 
@@ -50,9 +57,22 @@ const style = () =>
     .pipe(minify())
     .pipe(gulp.dest(routes.style.dist));
 
+const js = () =>
+  gulp
+    .src(routes.js.src)
+    .pipe(
+      bro({
+        transform: [
+          babelify.configure({ presets: ["@babel/preset-env"] }),
+          ["uglifyify", { global: true }],
+        ],
+      })
+    )
+    .pipe(gulp.dest(routes.js.dist));
+
 const prepare = gulp.series([clean]);
 
-const assets = gulp.series([pug, style]);
+const assets = gulp.series([pug, style, js]);
 
 const live = gulp.parallel([webserver, watch]);
 
