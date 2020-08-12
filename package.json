@@ -4,7 +4,9 @@
   "description": "Cloning Web app with Vanilla JS",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/crazybirdz/vanillaJS/issues"
   },
-  "homepage": "https://github.com/crazybirdz/vanillaJS#readme"
+  "homepage": "https://github.com/crazybirdz/vanillaJS#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "browserlist": [
+      "last 2 versions"
+    ],
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.3.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^4.14.1"
+  }
 }
