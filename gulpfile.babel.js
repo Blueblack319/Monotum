@@ -25,7 +25,7 @@ const routes = {
     watch: "src/**/*.pug",
   },
   js: {
-    src: "src/js/main.js",
+    src: "src/js/*.js",
     dist: "dist/js",
     watch: "src/**/*.js",
   },
