@@ -4,11 +4,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/style.css")
-        title Chrome-App
+        title monotum
     body
-        header
         main
-            .js-clock Clock
+            .js-clock.clock Clock
             .js-greeting.greeting What your Name?
             form.js-form.form
                 input(type="text", placeholder="Please, Write name here") 
@@ -16,7 +15,6 @@ html(lang="en")
                 div What do you have to do today?
                 input(type="text", placeholder="Write your agenda here")
             ul.js-toDoList
-        footer
             .js-weather
 
         script(src="js/clock.js")
