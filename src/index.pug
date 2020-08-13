@@ -9,13 +9,17 @@ html(lang="en")
         header
         main
             .js-clock Clock
-            div.js-greeting.greeting What your Name?
+            .js-greeting.greeting What your Name?
             form.js-form.form
-                input(type="text", placeholder="Please, Write name") 
-            .toDo To Do
+                input(type="text", placeholder="Please, Write name here") 
+            form.js-toDoForm
+                div What do you have to do today?
+                input(type="text", placeholder="Write your agenda here")
+            ul.js-toDoList
         footer
 
         script(src="js/clock.js")
         script(src="js/name.js")
+        script(src="js/to-do.js")
 
 
