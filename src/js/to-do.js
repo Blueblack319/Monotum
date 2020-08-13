@@ -71,5 +71,3 @@ const init = () => {
   form.addEventListener("submit", handleSubmit);
 };
 init();
-
-// saveToDo, deleteToDo, loadToDo, paintToDos

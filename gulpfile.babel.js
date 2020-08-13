@@ -5,6 +5,7 @@ import autoprefixer from "gulp-autoprefixer";
 import minify from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
+import image from "gulp-image";
 import ws from "gulp-webserver";
 import ghPages from "gulp-gh-pages";
 import del from "del";
@@ -29,6 +30,10 @@ const routes = {
     dist: "dist/js",
     watch: "src/**/*.js",
   },
+  img: {
+    src: "src/img/*",
+    dist: "dist/img/",
+  },
 };
 
 const webserver = () =>
@@ -38,6 +43,7 @@ const watch = () => {
   gulp.watch(routes.style.watch, style);
   gulp.watch(routes.pug.watch, pug);
   gulp.watch(routes.js.watch, js);
+  gulp.watch(routes.img.src, img);
 };
 
 const gh = () => gulp.src("dist/**/*").pipe(ghPages());
@@ -71,9 +77,12 @@ const js = () =>
     )
     .pipe(gulp.dest(routes.js.dist));
 
+const img = () =>
+  gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dist));
+
 const prepare = gulp.series([clean]);
 
-const assets = gulp.series([pug, style, js]);
+const assets = gulp.series([pug, style, js, img]);
 
 const live = gulp.parallel([webserver, watch]);
 
