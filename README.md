@@ -8,5 +8,4 @@
 - [x] name
 - [x] todo
 - [x] location
-- [ ] weather API
-- [ ]
+- [x] weather API
