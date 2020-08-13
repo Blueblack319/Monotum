@@ -3,14 +3,10 @@
 ## Cloning Web app with Vanilla JS
 
 - [x] gulpfile
-- [ ] Random background
-- [ ] clock
-- [ ] name
-- [ ] todo
-- [ ] location
+- [x] Random background
+- [x] clock
+- [x] name
+- [x] todo
+- [x] location
+- [ ] weather API
 - [ ]
-
-* [ ] pug
-* [ ] styling
-* [ ] js
-* [ ]
