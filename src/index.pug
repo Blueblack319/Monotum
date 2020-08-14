@@ -6,16 +6,18 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
         title monotum
     body
+        header
+            .js-weather
         main
             .js-clock.clock Clock
-            .js-greeting.greeting What your Name?
-            form.js-form.form
-                input(type="text", placeholder="Please, Write name here") 
-            form.js-toDoForm
-                div What do you have to do today?
-                input(type="text", placeholder="Write your agenda here")
-            ul.js-toDoList
-            .js-weather
+            .content
+                .js-greeting.greeting What your Name?
+                form.js-form.form
+                    input(type="text", placeholder="Please, Write name here") 
+                div.askToDo What do you have to do today?
+                form.js-toDoForm.toDoForm
+                    input(type="text", placeholder="Write a To Do here")
+                ul.js-toDoList.toDoList
 
         script(src="js/clock.js")
         script(src="js/name.js")

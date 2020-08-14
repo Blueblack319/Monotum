@@ -1,0 +1,29 @@
+@import "_variables";
+
+@mixin input($color) {
+  @if $color == $grey {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid $color;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    &::placeholder {
+      color: $grey;
+    }
+    outline: none;
+  } @else {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid $color;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    &::placeholder {
+      color: $color;
+    }
+    outline: none;
+  }
+}

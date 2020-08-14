@@ -13,7 +13,7 @@ const getWeather = (lat, lon) => {
     .then(function (response) {
       const temp = response.main.temp;
       const city = response.name;
-      weather.innerText = `${temp} @ ${city}`;
+      weather.innerText = `${temp}° @ ${city}`;
     });
 };
 
